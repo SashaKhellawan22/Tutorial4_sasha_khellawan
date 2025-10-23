@@ -1,0 +1,23 @@
+# Define your first and last name
+first_name = "Sasha"
+last_name = "Khellawan"
+
+# Combine them into a full name
+full_name = f"{first_name} {last_name}"
+
+# 1. Open the file in write mode ('w')
+# The 'with' statement ensures the file is properly closed even if errors occur.
+with open("my_name.txt", "w") as file:
+    # 2. Write the full name to the file
+    file.write(full_name + "\n") # Add a newline for cleaner output
+
+# 3. The file is automatically closed by the 'with' statement
+
+# 4. Open the file in read mode ('r')
+with open("my_name.txt", "r") as file:
+    # 5. Read the content of the file
+    content = file.read()
+
+# 6. Print the content
+print("Content of 'my_name.txt':")
+print(content)
